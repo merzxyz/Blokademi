@@ -294,30 +294,33 @@ export default function LandingPage() {
               {
                 layer: "Frontend Layer",
                 icon: Code2,
-                color: "border-chart-1",
+                iconColor: "text-chart-1",
+                iconBg: "bg-chart-1/20",
                 technologies: ["React", "TailwindCSS", "Web3.js", "MetaMask"],
                 description: "User interface for schedule management, wallet connection, and blockchain interaction.",
               },
               {
                 layer: "Smart Contract Layer",
                 icon: FileCheck,
-                color: "border-chart-2",
+                iconColor: "text-chart-2",
+                iconBg: "bg-chart-2/20",
                 technologies: ["Solidity", "Remix IDE", "OpenZeppelin", "Hardhat"],
                 description: "Business logic enforcement with require assertions, access control, and state validation.",
               },
               {
                 layer: "Blockchain Layer",
                 icon: Blocks,
-                color: "border-chart-4",
+                iconColor: "text-chart-4",
+                iconBg: "bg-chart-4/20",
                 technologies: ["Ethereum", "EVM", "IPFS", "Gas Optimization"],
                 description: "Decentralized storage and execution with permanent transaction history and audit trails.",
               },
             ].map((layer, i) => (
-              <Card key={i} className={`border-l-4 ${layer.color}`}>
+              <Card key={i}>
                 <CardHeader>
                   <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-md bg-muted">
-                      <layer.icon className="h-5 w-5" />
+                    <div className={`flex h-10 w-10 items-center justify-center rounded-md ${layer.iconBg}`}>
+                      <layer.icon className={`h-5 w-5 ${layer.iconColor}`} />
                     </div>
                     <CardTitle className="text-lg">{layer.layer}</CardTitle>
                   </div>
