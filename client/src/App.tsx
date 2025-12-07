@@ -25,6 +25,11 @@ import LecturerSchedules from "@/pages/dashboard/lecturer/schedules";
 import LecturerRequests from "@/pages/dashboard/lecturer/requests";
 import LecturerValidation from "@/pages/dashboard/lecturer/validation";
 import LecturerTransactions from "@/pages/dashboard/lecturer/transactions";
+import StudentDashboard from "@/pages/dashboard/student/index";
+import StudentSchedules from "@/pages/dashboard/student/schedules";
+import StudentCourses from "@/pages/dashboard/student/courses";
+import StudentEnrollments from "@/pages/dashboard/student/enrollments";
+import StudentTransactions from "@/pages/dashboard/student/transactions";
 
 function Router() {
   return (
@@ -48,7 +53,11 @@ function Router() {
       <Route path="/dashboard/lecturer/requests" component={LecturerRequests} />
       <Route path="/dashboard/lecturer/validation" component={LecturerValidation} />
       <Route path="/dashboard/lecturer/transactions" component={LecturerTransactions} />
-      <Route path="/dashboard/student" component={LandingPage} />
+      <Route path="/dashboard/student" component={StudentDashboard} />
+      <Route path="/dashboard/student/schedules" component={StudentSchedules} />
+      <Route path="/dashboard/student/courses" component={StudentCourses} />
+      <Route path="/dashboard/student/enrollments" component={StudentEnrollments} />
+      <Route path="/dashboard/student/transactions" component={StudentTransactions} />
       <Route component={NotFound} />
     </Switch>
   );
