@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/select";
 import { TransactionTable, TransactionCards } from "@/components/shared/transaction-table";
 import { StatCard } from "@/components/shared/stat-card";
+import { PublicLayout } from "@/components/layout/public-layout";
 import { Database, Search, Filter, CheckCircle, Clock, XCircle, History } from "lucide-react";
 
 const mockTransactions = [
@@ -118,6 +119,7 @@ export default function TransactionsPage() {
   };
 
   return (
+    <PublicLayout>
     <div className="min-h-screen pt-20">
       <section className="px-4 py-12 md:px-8">
         <div className="mx-auto max-w-7xl">
@@ -240,5 +242,6 @@ export default function TransactionsPage() {
         </div>
       </section>
     </div>
+    </PublicLayout>
   );
 }

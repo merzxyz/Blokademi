@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useWallet } from "@/lib/wallet-context";
+import { PublicLayout } from "@/components/layout/public-layout";
 import {
   Shield,
   Lock,
@@ -27,7 +28,7 @@ export default function LandingPage() {
   const { connect, isConnected, isConnecting } = useWallet();
 
   return (
-    <div className="flex flex-col">
+    <PublicLayout>
       <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden px-4 py-20 md:px-8">
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-chart-1/5" />
@@ -535,6 +536,6 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
-    </div>
+    </PublicLayout>
   );
 }

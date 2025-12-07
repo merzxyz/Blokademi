@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { PublicLayout } from "@/components/layout/public-layout";
 import {
   Users,
   Boxes,
@@ -16,7 +17,8 @@ import {
 
 export default function UMLPage() {
   return (
-    <div className="min-h-screen pt-20">
+    <PublicLayout>
+      <div className="min-h-screen pt-20">
       <section className="px-4 py-12 md:px-8 md:py-20">
         <div className="mx-auto max-w-4xl text-center">
           <Badge variant="outline" className="mb-4">System Modeling</Badge>
@@ -435,5 +437,6 @@ export default function UMLPage() {
         </div>
       </section>
     </div>
+    </PublicLayout>
   );
 }

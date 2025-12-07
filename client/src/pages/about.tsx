@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { PublicLayout } from "@/components/layout/public-layout";
 import {
   Blocks,
   GraduationCap,
@@ -17,7 +18,8 @@ import {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen pt-20">
+    <PublicLayout>
+      <div className="min-h-screen pt-20">
       <section className="px-4 py-12 md:px-8 md:py-20">
         <div className="mx-auto max-w-4xl text-center">
           <Badge variant="outline" className="mb-4">About BLOKADEMI</Badge>
@@ -268,5 +270,6 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
+    </PublicLayout>
   );
 }

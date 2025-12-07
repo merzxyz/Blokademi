@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/select";
 import { useWallet } from "@/lib/wallet-context";
 import { Link } from "wouter";
+import { PublicLayout } from "@/components/layout/public-layout";
 import {
   Wallet,
   Shield,
@@ -65,7 +66,8 @@ export default function WalletPage() {
   const RoleIcon = getRoleIcon(role);
 
   return (
-    <div className="min-h-screen pt-20">
+    <PublicLayout>
+      <div className="min-h-screen pt-20">
       <section className="px-4 py-12 md:px-8">
         <div className="mx-auto max-w-3xl">
           <div className="mb-8 text-center">
@@ -297,5 +299,6 @@ export default function WalletPage() {
         </div>
       </section>
     </div>
+    </PublicLayout>
   );
 }
